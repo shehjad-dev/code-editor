@@ -65,8 +65,8 @@ const Output = ({ editorRef, editorLanguage, outputMode, setOutputMode, exampleP
                 <Button
                     onClick={() => {
                         outputMode === "console" ? runCode() : runExampleProblems()
-                    }
-                    }
+                    }}
+                    disabled={isLoading}
                     // onClick={runCode}
                     className="bg-indigo-500 w-[140px] mb-[10px] gap-[0.5rem] hover:bg-indigo-400 text-white font-[500]"
                 >
