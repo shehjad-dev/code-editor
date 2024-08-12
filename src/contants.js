@@ -8,7 +8,8 @@ export const LANGUAGE_VERSIONS = {
 };
 
 export const CODE_SNIPPETS = {
-    javascript: `const twoSum = (nums, target) => {\n \n\n\n};\n\nconsole.log(twoSum([3, 2, 4], 6))\n`,
+    javascript: `const twoSum = (nums, target) => {\n\tconst pairIdx = {};\n\n\tfor (let i = 0; i < nums.length; i++) {\n\t\tconst num = nums[i];\n\t\tif (target - num in pairIdx) {\n\t\t\treturn [i, pairIdx[target - num]];\n\t\t}\n\t\tpairIdx[num] = i;\n\t}\n\n\treturn undefined;\n};\n\n//note - 1: dont change the function name\n//note - 2: in global scope, you can only print the output of the returned statement\n\nconsole.log(twoSum([3, 2, 4], 6))`,
+    // javascript: `const twoSum = (nums, target) => { \n\n\n};\n\nconsole.log(twoSum([3, 2, 4], 6))\n`,
     // javascript: `\nfunction greet(name) {\n\tconsole.log("Hello, " + name + "!");\n}\n\ngreet("Alex");\n`,
     typescript: `\ntype Params = {\n\tname: string;\n}\n\nfunction greet(data: Params) {\n\tconsole.log("Hello, " + data.name + "!");\n}\n\ngreet({ name: "Alex" });\n`,
     python: `\ndef greet(name):\n\tprint("Hello, " + name + "!")\n\ngreet("Alex")\n`,

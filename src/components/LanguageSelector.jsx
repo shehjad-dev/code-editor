@@ -11,7 +11,6 @@ import { LANGUAGE_VERSIONS, CODE_SNIPPETS } from "../contants"
 const languages = Object.entries(LANGUAGE_VERSIONS)
 
 const LanguageSelector = ({ editorLanguage, setEditorLanguage, setValue }) => {
-    console.log(languages, "languages")
 
     const handleMenuChange = (val) => {
         setEditorLanguage(val);
